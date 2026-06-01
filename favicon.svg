@@ -1,0 +1,43 @@
+<svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="LevelGit commit graph animation showing developer growth" role="img">
+          <defs>
+            <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Single smooth bezier curve through all three node dots -->
+          <!-- Mathematically calculated to intersect (170, 170) perfectly -->
+          <path
+                d="M 70 230 C 170 230, 170 110, 270 110"
+                stroke="#6EE7B7"
+                stroke-width="3"
+                stroke-linecap="round"
+                fill="none"
+                opacity="0.9"/>
+
+          <!-- Bottom-left node — outline only, smallest -->
+          <g class="node-ring">
+            <rect x="45" y="205" width="50" height="50" rx="12"
+                  fill="none"
+                  stroke="#6EE7B7"
+                  stroke-width="2.5"/>
+            <circle cx="70" cy="230" r="7" fill="#6EE7B7" filter="url(#glow)"/>
+          </g>
+
+          <!-- Middle node — dark green fill, medium -->
+          <g class="node-ring">
+            <rect x="143" y="144" width="54" height="52" rx="13"
+                  fill="#2A5C3A"
+                  stroke="none"/>
+            <circle cx="170" cy="170" r="8" fill="#6EE7B7" filter="url(#glow)"/>
+          </g>
+
+          <!-- Top-right node — light green fill, largest, white dot -->
+          <g class="node-ring">
+            <rect x="239" y="80" width="62" height="60" rx="15"
+                  fill="#86EFAC"
+                  stroke="none"/>
+            <circle cx="270" cy="110" r="9" fill="#ffffff"/>
+          </g>
+        </svg>
