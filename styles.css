@@ -261,7 +261,7 @@ h2 .accent{color:var(--green)}
 
 /* ── COMPARISON ─────────────────────────────── */
 .compare{background:var(--surface)}
-.compare-table{margin-top:60px;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.compare-table{margin-top:60px;border:1px solid var(--border);border-radius:14px;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .compare-table table{width:100%;border-collapse:collapse;font-size:14px}
 .compare-table th{
   padding:14px 20px;text-align:left;font-family:var(--font-m);
@@ -354,6 +354,11 @@ footer{
   .steps::before{display:none}
   .who-grid{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center}
+  /* Show 3 columns: Feature, Generic, LevelGit (Hide YouTube) */
+  .compare-table th:nth-child(3),
+  .compare-table td:nth-child(3) {
+    display: none;
+  }
 }
 @media(max-width:600px){
   nav{padding:0 1.25rem}
@@ -361,4 +366,13 @@ footer{
   .hero{padding:100px 1.25rem 60px}
   .features-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr}
+  /* Show 2 columns: Feature, LevelGit (Hide Generic and YouTube) */
+  .compare-table th:nth-child(2),
+  .compare-table td:nth-child(2) {
+    display: none;
+  }
+  .compare-table th, .compare-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
 }
